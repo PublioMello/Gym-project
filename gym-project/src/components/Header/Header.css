@@ -1,30 +1,122 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY (fundo app) */
+body {
+  background-color: #0b0f19;
+  font-family: sans-serif;
+  color: white;
+}
+
+/* CONTAINER CENTRAL (simula celular) */
+.app-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* HEADER */
 .header {
   display: flex;
   align-items: center;
+  gap: 15px;
   padding: 20px;
-  position: relative;
+
+  background: linear-gradient(180deg, #3b82f6, #1e3a8a);
+  border-radius: 0 0 30px 30px;
 }
 
+/* FOTO */
 .profile-picture {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid white;
 }
-/* ESQUERDA */
-.header-left {
+
+/* TEXTO + MENU */
+.header-content {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column; /* 👈 nome em cima */
   gap: 10px;
 }
 
-/* MENU CENTRAL REAL */
-.header-menu {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+/* TEXTO */
+.greeting {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* DOCK */
+.dock {
   display: flex;
-  list-style: none;
-  gap: 20px;
+  gap: 25px;
+
+  background: rgba(20, 20, 30, 0.8);
+  backdrop-filter: blur(10px);
+
+  padding: 10px 20px;
+  border-radius: 15px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ITEM */
+.dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 12px;
+
+  transition: 0.3s;
+}
+
+/* ÍCONE */
+.dock-item svg {
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.dock-item:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* ATIVO */
+.dock-item.active {
+  color: #3b82f6;
+}
+
+.dock-item.active svg {
+  transform: scale(1.2);
+}
+
+/* ========================= */
+/* 📱 RESPONSIVO (IMPORTANTE) */
+/* ========================= */
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column; /* empilha tudo */
+    align-items: flex-start;
+  }
+
+  .profile-picture {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dock {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
