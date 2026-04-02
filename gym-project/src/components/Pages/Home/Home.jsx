@@ -3,11 +3,7 @@ import HeaderHome from "../../Header/Header";
 // import MainHome from "./Main-home/MainHome";
 
 function Home() {
-  return (
-    <div>
-      <HeaderHome />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Home;

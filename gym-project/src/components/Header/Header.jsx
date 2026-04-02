@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import paraguay from "../../../../assets/images/paraguay.jpeg";
+import paraguay from "../../assets/images/paraguay.jpeg";
 function Header() {
   return (
     <header className="header">
