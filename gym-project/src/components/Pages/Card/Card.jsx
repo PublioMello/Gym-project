@@ -8,11 +8,13 @@ function Card({ title, value, unit, change, isPositive, icon }) {
         <div className="icon">{icon}</div>
         <h4>{title}</h4>
       </div>
-      <h2>
-        {value} <span>{unit}</span>
-      </h2>
+      <div className="values">
+        <h2>
+          {value} <span>{unit}</span>
+        </h2>
 
-      <p style={{ color: isPositive ? "limegreen" : "red" }}>{change}</p>
+        <p style={{ color: isPositive ? "limegreen" : "red" }}>{change}</p>
+      </div>
     </div>
   );
 }

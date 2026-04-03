@@ -7,15 +7,14 @@ import { FaHome, FaDumbbell, FaAppleAlt, FaHeartbeat } from "react-icons/fa";
 function Header() {
   return (
     <header className="header">
-      {/* FOTO */}
-      <img src={paraguay} alt="Minha foto" className="profile-picture" />
-
-      {/* TEXTO + DOCK */}
       <div className="header-content">
-        <h3 className="greeting">
-          <span>Bom dia, </span>Publio 👋
-        </h3>
+        <div className="profile">
+          <img src={paraguay} alt="Minha foto" className="profile-picture" />
 
+          <h3 className="greeting">
+            <span>Bom dia, </span>Publio 👋
+          </h3>
+        </div>
         <div className="dock">
           <NavLink to="/" className="dock-item">
             <FaHome />
@@ -36,6 +35,9 @@ function Header() {
             <FaHeartbeat />
             <span>Cardio</span>
           </NavLink>
+        </div>
+        <div className="exit">
+          <p>Treinos feitos na semana </p>
         </div>
       </div>
     </header>

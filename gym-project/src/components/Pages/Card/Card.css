@@ -4,22 +4,23 @@
   gap: 5px;
 
   max-width: 500px; /* controla largura */
-  /* margin: 0 auto; centraliza */
 }
 .card {
   background: #1c1f26;
   border-radius: 20px;
   padding: 20px;
-  width: 80%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   transition: 0.3s;
 }
-
+.values {
+  align-items: center;
+}
 .card:hover {
   transform: translateY(-3px);
 }
@@ -31,7 +32,7 @@
   align-items: center;
 }
 .card h4 {
-  font-size: 32px;
+  font-size: 30px;
   color: #f4f6fa;
   margin-bottom: 10px;
 }
@@ -57,4 +58,32 @@
   font-size: 14px;
   margin-top: 8px;
   font-weight: 500;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVO  */
+/* ========================= */
+
+@media (max-width: 600px) {
+  .card {
+    align-items: center;
+  }
+  .card-header {
+    justify-content: space-evenly;
+    gap: 15px;
+  }
+  .values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .card h4 {
+    font-size: 24px;
+    max-width: 100%;
+  }
+  .card h2 {
+    text-align: center;
+  }
 }

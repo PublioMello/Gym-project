@@ -22,11 +22,18 @@ body {
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  position: relative;
   gap: 15px;
   padding: 20px;
 
   background: linear-gradient(180deg, #3b82f6, #1e3a8a);
   border-radius: 0 0 30px 30px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 /* FOTO */
@@ -41,7 +48,11 @@ body {
 /* TEXTO + MENU */
 .header-content {
   display: flex;
-  flex-direction: column; /* 👈 nome em cima */
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
   gap: 10px;
 }
 
@@ -57,7 +68,7 @@ body {
   gap: 25px;
 
   background: rgba(20, 20, 30, 0.8);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
 
   padding: 10px 20px;
   border-radius: 15px;
@@ -101,13 +112,13 @@ body {
 }
 
 /* ========================= */
-/* 📱 RESPONSIVO (IMPORTANTE) */
+/* 📱 RESPONSIVO  */
 /* ========================= */
 
 @media (max-width: 600px) {
-  .header {
+  .header-content {
     flex-direction: column; /* empilha tudo */
-    align-items: flex-start;
+    align-items: center;
   }
 
   .profile-picture {
@@ -116,7 +127,7 @@ body {
   }
 
   .dock {
-    width: 100%;
+    width: 80%;
     justify-content: space-between;
   }
 }
