@@ -4,6 +4,7 @@ import WaterCard from "../Card/WaterCard/WaterCard";
 import "./Home.css";
 import { GiWeightScale } from "react-icons/gi";
 import { LiaPercentageSolid } from "react-icons/lia";
+import { RiWaterFlashFill } from "react-icons/ri";
 function Home() {
   return (
     <div>
@@ -29,7 +30,7 @@ function Home() {
           isPositive={false}
           icon=<LiaPercentageSolid />
         />
-        <WaterCard />
+        <WaterCard icon=<RiWaterFlashFill /> />
       </div>
     </div>
   );
