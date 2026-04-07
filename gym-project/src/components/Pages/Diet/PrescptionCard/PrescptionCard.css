@@ -1,0 +1,40 @@
+.cardInfo {
+  background: #1c1f26;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* seta animada */
+.arrow {
+  transition: transform 0.1s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* conteúdo escondido */
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+}
+
+/* quando abre */
+.cardInfo.open .content {
+  max-height: 200px; /* ajusta conforme tamanho do texto */
+  padding: 15px;
+}
