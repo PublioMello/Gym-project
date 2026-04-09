@@ -1,0 +1,73 @@
+.cardInfo-train {
+  background: #1c1f26;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.header-info-train {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+/* seta animada */
+.arrow {
+  transition: transform 0.2s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* conteúdo escondido */
+.content-card {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+}
+
+/* quando abre (CORRIGIDO) */
+.cardInfo-train.open .content-card {
+  max-height: 500px; /* aumenta pra evitar cortar conteúdo */
+  padding: 10px 15px 15px;
+}
+
+/* lista */
+.content-train {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* linhas */
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+/* remove última linha */
+.row:last-child {
+  border-bottom: none;
+}
+
+/* reps alinhadas */
+.row span:last-child {
+  font-weight: 600;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* hover bonito */
+.row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
