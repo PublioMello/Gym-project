@@ -3,3 +3,6 @@
   flex-direction: column;
   gap: 10px; /* espaço entre tudo */
 }
+.container-diet h2 {
+  text-align: center;
+}

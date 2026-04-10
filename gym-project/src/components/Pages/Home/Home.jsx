@@ -7,7 +7,7 @@ import { LiaPercentageSolid } from "react-icons/lia";
 import { RiWaterFlashFill } from "react-icons/ri";
 function Home() {
   return (
-    <div>
+    <div className="container-home">
       <div style={{ padding: "20px" }}>
         <h3>Progresso</h3>
       </div>
